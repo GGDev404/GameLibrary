@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/src/styles/stylehome.css">
+    <link rel="stylesheet" href="/static/src/styles/stylehomecrud.css">
+    <link rel="stylesheet" href="/static/src/styles/presentacionHome.css">
+    <title>Game Library</title>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="nav-wrapper">
+            <div class="grad-bar"></div>
+            <nav class="navbar">
+                <img src="/static/src/img/brin.png" alt="Company Logo">
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav no-search">
+                    <li class="nav-item" style="margin-left: 20px;"><a href="home">Home</a></li>
+                    <li class="nav-item" style="margin-right: 10px;"><a href="/Games">Videogames</a></li>
+                    <li class="nav-item"><a href="/dev">Develoops</a></li>
+                    <li class="nav-item"><a href="/genders">Genders</a></li>
+                </ul>
+            </nav>
+        </div>
+        </p>
+        <div>
+            <!-- /*--------------------------------------------------------------------------------------------------------------------------------------*/ -->
+            <div class="strong1"><strong><center>VIDEOGAMES</center></strong></div>
+            <div class="juegoscrud">
+                <div class="container-homecrud">
+                    <div class="slider">
+
+                        <% results.forEach((game) => { %>
+                        <div class="card">
+                            <img src="<%= game.img %>" class="card-img" alt="">
+                            <div class="card-body">
+                                <h1 class="card-title"><%= game.nombre %></h1>
+                                <p class="card-sub-title"><%= game.descripcion %></p>
+                                <p class="card-info"><%= game.genero %></p>
+                            </div>
+                        </div>
+                        <% }) %>
+                    </div>
+                </div>
+                <div class="arrow arrow-left">&lt;</div>
+                <div class="arrow arrow-right">&gt;</div>
+            </div>
+        </div>
+        <!-- /*--------------------------------------------------------------------------------------------------------------------------------------*/ -->
+        <div class="strong2"><strong><center>DEVELOOPS</center></strong></div>
+        <div class="juegoscrud">
+            <div class="container-homecrud">
+                <div class="slider2">
+
+                    <% dev.forEach((game) => { %>
+                        <div class="card">
+                            <img src="<%= game.img %>" class="card-img" alt="">
+                            <div class="card-body">
+                                <h1 class="card-title"><%= game.nombre %></h1>
+                                <p class="card-sub-title"><%= game.descripcion %></p>
+                                <p class="card-info"><%= game.genero %></p>
+                            </div>
+                        </div>
+                        <% }) %>
+                </div>
+            </div>
+            <div class="arrow2 arrow-left2">&lt;</div>
+            <div class="arrow2 arrow-right2">&gt;</div>
+        </div>
+        <!-- /*--------------------------------------------------------------------------------------------------------------------------------------*/ -->
+        <div class="strong3"><strong><center>GENDERS</center></strong></div>
+        <div class="juegoscrud">
+            <div class="container-homecrud">
+                <div class="slider3">
+
+                    <% gender.forEach((game) => { %>
+                        <div class="card">
+                            <img src="<%= game.img %>" class="card-img" alt="">
+                            <div class="card-body">
+                                <h1 class="card-title"><%= game.nombre %></h1>
+                                <p class="card-sub-title"><%= game.descripcion %></p>
+                                <p class="card-info"><%= game.genero %></p>
+                            </div>
+                        </div>
+                        <% }) %>
+
+                </div>
+            </div>
+            <div class="arrow3 arrow-left3">&lt;</div>
+            <div class="arrow3 arrow-right3">&gt;</div>
+        </div>
+    </div>
+
+    </div>
+    <script src="funtions.js"></script>
+</body>
+
+</html>

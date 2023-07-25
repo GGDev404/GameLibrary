@@ -1,0 +1,8 @@
+{
+    "mssql": {
+        "user": "sa",
+        "password": "GeoDev404",
+        "server": "GGDEV",
+        "database": "Library_VideoGames" 
+    }
+}

@@ -1,0 +1,14 @@
+.conatiner-mt-4 {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.conatiner-mt-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #4b4b4b;
+}
